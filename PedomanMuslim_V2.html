@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1b5a3c"><title>Pedoman Muslim</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#1b5a3c;--g2:#14452e;--gold:#b8892f;--gl:#e3c06b;--bg:#f1eadb;--card:#fbf6ec;--ink:#17321f;--mute:#5f6b60;--line:#e4d9bd;--ar:30px}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+button,input{font-family:inherit}
+#app{max-width:560px;margin:auto;min-height:100vh;padding-bottom:110px;background:var(--bg)}
+.hero{position:relative;background:linear-gradient(160deg,var(--g),var(--g2));color:#fff;text-align:center;padding:calc(26px + env(safe-area-inset-top,0px)) 20px 70px;border-radius:0 0 44px 44px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23e3c06b' stroke-opacity='.16'%3E%3Crect x='13' y='13' width='38' height='38'/%3E%3Crect x='13' y='13' width='38' height='38' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
+.hero>*{position:relative}
+.bis{font-family:Amiri,serif;font-size:40px;line-height:1.6;background:linear-gradient(#f4dc8f,#b8892f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1{font-size:19px;font-weight:700;margin-top:4px}.hero p{font-size:12.5px;opacity:.85;margin-top:2px}
+.panel{margin:-48px 14px 0;position:relative;background:var(--card);border-radius:24px;padding:14px;box-shadow:0 8px 24px rgba(40,30,0,.12)}
+.last{display:flex;align-items:center;gap:14px;width:100%;border:none;background:none;text-align:left;color:var(--ink);cursor:pointer;padding:4px 2px 12px}
+.last .ic{font-size:38px}.last small{font-size:12.5px;color:var(--mute)}.last b{display:block;font-size:22px;line-height:1.2}
+.go{margin-left:auto;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gl),var(--gold));color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;flex:none}
+.search{width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:16px;background:#f6efdf;font-size:14px;color:var(--ink);outline:none}
+.sec{display:flex;justify-content:space-between;align-items:baseline;margin:22px 18px 10px}.sec b{font-size:21px;color:var(--g2)}.sec span{font-size:13px;color:var(--g);font-weight:600}
+.item{display:flex;align-items:center;gap:14px;width:calc(100% - 28px);margin:0 14px 10px;padding:14px;background:var(--card);border:none;border-radius:18px;text-align:left;color:var(--ink);box-shadow:0 2px 8px rgba(40,30,0,.07);cursor:pointer}
+.item:active{transform:scale(.98)}
+.oct{flex:none;width:44px;height:44px;clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%);background:linear-gradient(135deg,var(--gl),var(--gold));color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
+.item .t{flex:1;min-width:0}.item .t b{display:block;font-size:17px;color:var(--g2)}.item .t small{font-size:12.5px;color:var(--mute)}
+.ar{font-family:Amiri,serif;font-size:24px;color:var(--g2);font-weight:700}
+.top{padding:calc(18px + env(safe-area-inset-top,0px)) 18px 4px}.top h1{font-size:24px;color:var(--g2)}.top p{font-size:13px;color:var(--mute)}
+.dh{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;background:linear-gradient(160deg,var(--g),var(--g2));color:#fff}
+.dh b{font-size:16px}.dh small{display:block;font-size:11.5px;opacity:.8}
+.cb{width:38px;height:38px;border:none;border-radius:12px;background:rgba(255,255,255,.16);color:#fff;font-weight:700;cursor:pointer}
+.card{margin:12px 14px;background:var(--card);border-radius:20px;padding:14px;box-shadow:0 2px 8px rgba(40,30,0,.07)}
+.ay .row{display:flex;align-items:center;justify-content:space-between}
+.ay .oct{width:36px;height:36px;font-size:13px}
+.bm{border:1px solid var(--line);background:none;border-radius:20px;padding:5px 12px;font-size:12px;color:var(--g);cursor:pointer;font-weight:600}.bm.on{background:var(--g);color:#fff}
+.arab{font-family:Amiri,serif;font-size:var(--ar);line-height:2.1;direction:rtl;text-align:right;margin:8px 0}
+.lat{font-size:13px;font-style:italic;color:var(--g);background:#eef0dc;border-radius:12px;padding:9px 12px}
+.art{font-size:13.5px;color:var(--mute);margin-top:8px}
+.ctx{margin:14px;padding:18px;border-radius:22px;background:linear-gradient(160deg,var(--g),var(--g2));color:#fff;text-align:center}
+.ctx .bis{font-size:34px}
+.note{margin:12px 14px;padding:11px 14px;border-radius:14px;background:#fdf0c9;border:1px solid var(--gl);font-size:13px}
+.ld{text-align:center;padding:60px 20px;color:var(--mute)}
+.sp{width:36px;height:36px;margin:0 auto 14px;border:4px solid var(--line);border-top-color:var(--g);border-radius:50%;animation:r .8s linear infinite}@keyframes r{to{transform:rotate(360deg)}}
+.chips{display:flex;gap:8px;padding:6px 14px 4px;overflow-x:auto}.chip{flex:none;border:none;border-radius:20px;padding:9px 16px;background:var(--card);color:var(--g2);font-weight:600;font-size:13px;cursor:pointer}.chip.on{background:var(--g);color:#fff}
+.tip{margin-top:10px;padding:9px 12px;border-radius:12px;background:#fdf0c9;font-size:13px}
+.ring{width:230px;height:230px;border-radius:50%;margin:20px auto;display:flex;align-items:center;justify-content:center;padding:12px}
+.ring button{width:100%;height:100%;border-radius:50%;border:none;background:var(--card);box-shadow:inset 0 0 0 6px var(--bg);cursor:pointer;color:var(--g2);display:flex;flex-direction:column;align-items:center;justify-content:center;user-select:none}
+.ring b{font-size:64px;line-height:1}.ring small{color:var(--mute);font-size:13px}
+.btn{display:block;width:calc(100% - 28px);margin:12px 14px;padding:14px;border:none;border-radius:16px;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-weight:700;font-size:14px;cursor:pointer}
+.btn.l{background:var(--card);color:var(--g2)}
+.inp{width:100%;margin-top:8px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#f6efdf;font-size:14px;outline:none;color:var(--ink)}
+.stat{display:flex;gap:10px;margin:12px 14px}.stat div{flex:1;background:var(--card);border-radius:18px;padding:14px;text-align:center}.stat b{display:block;font-size:24px;color:var(--g2)}.stat small{font-size:12px;color:var(--mute)}
+nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:560px;background:var(--card);border-radius:26px 26px 0 0;display:flex;padding:8px 6px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 18px rgba(40,30,0,.12);z-index:20}
+nav button{flex:1;border:none;background:none;color:var(--mute);font-size:12px;font-weight:600;padding:8px 2px;border-radius:18px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}nav button span{font-size:22px}
+nav button.on{background:var(--g);color:#fff}
+#splash{position:fixed;inset:0;z-index:99;background:linear-gradient(160deg,var(--g),var(--g2));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:f .6s ease 1.5s forwards}@keyframes f{to{opacity:0;visibility:hidden}}
+.hidden{display:none}
+</style></head><body>
+<div id="splash" onclick="this.style.display='none'"><div style="font-size:64px">📖</div><div class="bis" style="margin-top:8px">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><p style="margin-top:6px;font-size:14px;opacity:.85">Menyiapkan bacaan untukmu…</p></div>
+<div id="app"></div>
+<nav id="nav"></nav>
+<script>
+var M="Al-Fatihah,7,M;Al-Baqarah,286,D;Ali 'Imran,200,D;An-Nisa',176,D;Al-Ma'idah,120,D;Al-An'am,165,M;Al-A'raf,206,M;Al-Anfal,75,D;At-Taubah,129,D;Yunus,109,M;Hud,123,M;Yusuf,111,M;Ar-Ra'd,43,D;Ibrahim,52,M;Al-Hijr,99,M;An-Nahl,128,M;Al-Isra',111,M;Al-Kahfi,110,M;Maryam,98,M;Ta Ha,135,M;Al-Anbiya',112,M;Al-Hajj,78,D;Al-Mu'minun,118,M;An-Nur,64,D;Al-Furqan,77,M;Asy-Syu'ara',227,M;An-Naml,93,M;Al-Qasas,88,M;Al-'Ankabut,69,M;Ar-Rum,60,M;Luqman,34,M;As-Sajdah,30,M;Al-Ahzab,73,D;Saba',54,M;Fatir,45,M;Ya Sin,83,M;As-Saffat,182,M;Sad,88,M;Az-Zumar,75,M;Gafir,85,M;Fussilat,54,M;Asy-Syura,53,M;Az-Zukhruf,89,M;Ad-Dukhan,59,M;Al-Jasiyah,37,M;Al-Ahqaf,35,M;Muhammad,38,D;Al-Fath,29,D;Al-Hujurat,18,D;Qaf,45,M;Az-Zariyat,60,M;At-Tur,49,M;An-Najm,62,M;Al-Qamar,55,M;Ar-Rahman,78,D;Al-Waqi'ah,96,M;Al-Hadid,29,D;Al-Mujadalah,22,D;Al-Hasyr,24,D;Al-Mumtahanah,13,D;As-Saff,14,D;Al-Jumu'ah,11,D;Al-Munafiqun,11,D;At-Tagabun,18,D;At-Talaq,12,D;At-Tahrim,12,D;Al-Mulk,30,M;Al-Qalam,52,M;Al-Haqqah,52,M;Al-Ma'arij,44,M;Nuh,28,M;Al-Jinn,28,M;Al-Muzzammil,20,M;Al-Muddassir,56,M;Al-Qiyamah,40,M;Al-Insan,31,D;Al-Mursalat,50,M;An-Naba',40,M;An-Nazi'at,46,M;'Abasa,42,M;At-Takwir,29,M;Al-Infitar,19,M;Al-Mutaffifin,36,M;Al-Insyiqaq,25,M;Al-Buruj,22,M;At-Tariq,17,M;Al-A'la,19,M;Al-Gasyiyah,26,M;Al-Fajr,30,M;Al-Balad,20,M;Asy-Syams,15,M;Al-Lail,21,M;Ad-Duha,11,M;Al-Insyirah,8,M;At-Tin,8,M;Al-'Alaq,19,M;Al-Qadr,5,M;Al-Bayyinah,8,D;Az-Zalzalah,8,D;Al-'Adiyat,11,M;Al-Qari'ah,11,M;At-Takasur,8,M;Al-'Asr,3,M;Al-Humazah,9,M;Al-Fil,5,M;Quraisy,4,M;Al-Ma'un,7,M;Al-Kausar,3,M;Al-Kafirun,6,M;An-Nasr,3,D;Al-Lahab,5,M;Al-Ikhlas,4,M;Al-Falaq,5,M;An-Nas,6,M".split(';').map(function(x,i){x=x.split(',');return{n:i+1,l:x[0],c:x[1],t:x[2]=='M'?'Makkiyah':'Madaniyah'}});
+var DOA=[
+["Doa Bangun Tidur","الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ","Alhamdulillaahil-ladzii ahyaanaa ba'da maa amaatanaa wa ilaihin-nusyuur","Segala puji bagi Allah yang menghidupkan kami setelah mematikan kami, dan kepada-Nya kami dikembalikan."],
+["Doa Sebelum Tidur","بِاسْمِكَ اللَّهُمَّ أَحْيَا وَبِاسْمِكَ أَمُوتُ","Bismikallaahumma ahyaa wa bismika amuut","Dengan nama-Mu ya Allah aku hidup dan aku mati."],
+["Doa Sebelum Makan","اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ","Allaahumma baarik lanaa fiimaa razaqtanaa wa qinaa 'adzaaban-naar","Ya Allah, berkahilah rezeki yang Engkau berikan kepada kami dan lindungilah kami dari azab neraka."],
+["Doa Sesudah Makan","الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ","Alhamdulillaahil-ladzii ath'amanaa wa saqaanaa wa ja'alanaa muslimiin","Segala puji bagi Allah yang telah memberi kami makan dan minum serta menjadikan kami muslim."],
+["Doa Masuk Kamar Mandi","اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ","Allaahumma innii a'uudzu bika minal khubutsi wal khabaa-its","Ya Allah, aku berlindung kepada-Mu dari godaan setan laki-laki dan perempuan."],
+["Doa Keluar Kamar Mandi","غُفْرَانَكَ","Ghufraanaka","Aku memohon ampunan-Mu."],
+["Doa Masuk Masjid","اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ","Allaahummaf-tah lii abwaaba rahmatik","Ya Allah, bukakanlah untukku pintu-pintu rahmat-Mu."],
+["Doa Keluar Masjid","اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ","Allaahumma innii as-aluka min fadhlik","Ya Allah, aku memohon karunia-Mu."],
+["Doa Setelah Adzan","اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلَاةِ الْقَائِمَةِ آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ","Allaahumma rabba haadzihid-da'watit-taammah wash-shalaatil qaa-imah, aati Muhammadanil-wasiilata wal-fadhiilah, wab'atshu maqaaman mahmuudanil-ladzii wa'adtah","Ya Allah, Tuhan seruan yang sempurna ini dan sholat yang akan ditegakkan, berilah Nabi Muhammad wasilah dan keutamaan, serta tempatkan beliau di tempat terpuji yang telah Engkau janjikan."],
+["Doa Keluar Rumah","بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ","Bismillaahi tawakkaltu 'alallaahi laa haula wa laa quwwata illaa billaah","Dengan nama Allah, aku bertawakal kepada-Nya; tiada daya dan kekuatan kecuali dengan pertolongan Allah."],
+["Doa Naik Kendaraan","سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ","Subhaanal-ladzii sakhkhara lanaa haadzaa wa maa kunnaa lahu muqriniin, wa innaa ilaa rabbinaa lamunqalibuun","Maha Suci Allah yang telah menundukkan kendaraan ini bagi kami, padahal kami tidak mampu menguasainya, dan sungguh kepada Tuhan kami kami akan kembali."],
+["Doa untuk Kedua Orang Tua","رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا","Rabbighfir lii wa liwaalidayya warhamhumaa kamaa rabbayaanii shaghiiraa","Ya Tuhanku, ampunilah aku dan kedua orang tuaku, sayangilah mereka sebagaimana mereka mendidikku waktu kecil."],
+["Doa Menambah Ilmu","رَبِّ زِدْنِي عِلْمًا وَارْزُقْنِي فَهْمًا","Rabbi zidnii 'ilmaa warzuqnii fahmaa","Ya Tuhanku, tambahkanlah ilmuku dan berilah aku pemahaman."],
+["Doa Kebaikan Dunia & Akhirat","رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ","Rabbanaa aatinaa fid-dunyaa hasanah wa fil-aakhirati hasanah wa qinaa 'adzaaban-naar","Ya Tuhan kami, berilah kami kebaikan di dunia dan di akhirat, dan lindungilah kami dari azab neraka."]];
+var DZ=[["سُبْحَانَ اللَّهِ","Subhanallah",33],["الْحَمْدُ لِلَّهِ","Alhamdulillah",33],["اللَّهُ أَكْبَرُ","Allahu Akbar",33],["لَا إِلَٰهَ إِلَّا اللَّهُ","Laa ilaaha illallah",100],["أَسْتَغْفِرُ اللَّهَ","Astaghfirullah",100]];
+var wudhu=[
+{j:"Niat & Cuci Tangan",k:"Niatkan di dalam hatimu, lalu cuci kedua telapak tanganmu sebanyak 3 kali.",ar:"نَوَيْتُ الْوُضُوءَ لِرَفْعِ الْحَدَثِ الْأَصْغَرِ فَرْضًا لِلَّهِ تَعَالَى",la:"Nawaitul wudhuu-a liraf'il hadatsil ashghari fardhan lillaahi ta'aalaa",at:"Aku berniat wudhu untuk menghilangkan hadats kecil, fardhu karena Allah Ta'ala."},
+{j:"Berkumur & Membersihkan Hidung",k:"Berkumurlah 3 kali, lalu hirup air ke hidungmu dan keluarkan 3 kali.",ar:"",la:"Berkumur 3x dan istinsyaq 3x",at:"Hukumnya sunnah, tapi sangat dianjurkan agar wudhumu lebih sempurna."},
+{j:"Membasuh Wajah",k:"Basuh wajahmu dari batas dahi hingga dagu, telinga ke telinga, sebanyak 3 kali.",ar:"",la:"Basuh wajah merata 3x",at:"Ini rukun wudhu. Pastikan seluruh wajahmu terkena air."},
+{j:"Membasuh Kedua Tangan",k:"Basuh tangan kananmu hingga siku 3 kali, lalu tangan kirimu dengan cara yang sama.",ar:"",la:"Kanan dulu 3x, lalu kiri 3x",at:"Pastikan sikumu ikut basah ya."},
+{j:"Mengusap Kepala",k:"Usap sebagian kepalamu dengan tangan yang basah, dari depan ke belakang.",ar:"",la:"Usap kepala 1x",at:"Cukup 1 kali. Ini juga termasuk rukun wudhu."},
+{j:"Mengusap Telinga",k:"Usap bagian dalam telingamu dengan jari telunjuk dan bagian luarnya dengan ibu jari.",ar:"",la:"Usap telinga dengan sisa air dari kepala",at:"Lakukan tepat setelah mengusap kepala."},
+{j:"Membasuh Kedua Kaki",k:"Basuh kaki kananmu hingga mata kaki 3 kali, lalu kaki kirimu. Sela-sela jari jangan terlewat.",ar:"",la:"Sela jari digosok, mata kaki wajib basah",at:"Ini rukun wudhu. Mulailah dari yang kanan."},
+{j:"Berdoa Setelah Wudhu",k:"Menghadaplah ke kiblat, angkat tanganmu, lalu bacalah doa berikut.",ar:"أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",la:"Asyhadu an laa ilaaha illallaahu wahdahu laa syariika lah, wa asyhadu anna Muhammadan 'abduhu wa rasuuluh",at:"Aku bersaksi tiada Tuhan selain Allah, dan Muhammad adalah hamba serta utusan-Nya. Kamu akan dibukakan pintu surga yang kamu kehendaki."}
+];
+var sholat=[
+{j:"Niat",k:"Niatkan di hatimu bersamaan dengan takbiratul ihram.",a:"أُصَلِّي فَرْضَ الظُّهْرِ",l:"Usholli fardha ... lillaahi ta'aala",t:"Aku berniat sholat fardhu karena Allah Ta'ala. Sesuaikan dengan waktu sholatmu."},
+{j:"Takbiratul Ihram",k:"Angkat kedua tanganmu sejajar telinga lalu ucapkan takbir.",a:"اللهُ أَكْبَرُ",l:"Allahu Akbar",t:"Allah Maha Besar."},
+{j:"Berdiri Tegak",k:"Berdirilah menghadap kiblat jika kamu mampu.",a:"",l:"Berdiri tegak menghadap kiblat",t:"Jika sedang sakit, kamu boleh sholat sambil duduk atau berbaring."},
+{j:"Membaca Al-Fatihah",k:"Bacalah di setiap rakaat dengan tenang dan tartil.",a:"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",l:"Bismillaahir-rahmaanir-rahiim...",t:"Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang. Bacalah Al-Fatihah hingga selesai."},
+{j:"Ruku'",k:"Membungkuklah hingga punggungmu rata, tanganmu memegang lutut.",a:"سُبْحَانَ رَبِّيَ الْعَظِيمِ",l:"Subhaana rabbiyal 'adhiim (3x)",t:"Maha Suci Tuhanku Yang Maha Agung."},
+{j:"Tuma'ninah di Ruku'",k:"Diamlah sejenak hingga seluruh anggota tubuhmu tenang.",a:"",l:"Diam sejenak sebelum bangkit",t:"Jangan terburu-buru, ketenangan ini wajib."},
+{j:"I'tidal",k:"Bangkitlah dari ruku' dan berdiri tegak sambil mengangkat tangan.",a:"سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ",l:"Sami'allaahu liman hamidah",t:"Allah mendengar siapa yang memuji-Nya."},
+{j:"Tuma'ninah di I'tidal",k:"Berdirilah tegak dengan tenang sambil membaca doa.",a:"رَبَّنَا وَلَكَ الْحَمْدُ",l:"Rabbanaa wa lakal hamd",t:"Wahai Tuhan kami, bagi-Mu segala puji."},
+{j:"Sujud",k:"Letakkan 7 anggota tubuhmu: dahi, hidung, dua telapak tangan, dua lutut, dan ujung jari kaki.",a:"سُبْحَانَ رَبِّيَ الْأَعْلَى",l:"Subhaana rabbiyal a'laa (3x)",t:"Maha Suci Tuhanku Yang Maha Tinggi."},
+{j:"Tuma'ninah di Sujud",k:"Tahan sejenak sampai tubuhmu benar-benar tenang.",a:"",l:"Diam sejenak di dalam sujud",t:"Jangan langsung bangun, ya."},
+{j:"Duduk di Antara Dua Sujud",k:"Duduklah iftirasy: kaki kirimu diduduki, kaki kananmu ditegakkan.",a:"رَبِّ اغْفِرْ لِي وَارْحَمْنِي",l:"Rabbighfir lii warhamnii...",t:"Ya Tuhanku, ampunilah aku dan rahmatilah aku."},
+{j:"Tuma'ninah Duduk",k:"Duduklah dengan tenang sebelum sujud yang kedua.",a:"",l:"Diam sejenak",t:"Ketenangan di setiap gerakan adalah kunci sholat yang khusyuk."},
+{j:"Tasyahud Akhir",k:"Bacalah tasyahud pada rakaat terakhir dengan perlahan.",a:"التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلَّهِ",l:"Attahiyyaatul mubaarakaatush-shalawaatuth-thayyibaatu lillaah...",t:"Segala penghormatan, keberkahan, dan kebaikan hanya milik Allah."},
+{j:"Duduk Tawaruk",k:"Kaki kirimu masuk ke bawah kaki kanan, kaki kananmu tegak, dan pantatmu menempel lantai.",a:"",l:"Duduk tawaruk pada tasyahud akhir",t:"Ini posisi duduk khusus untuk tasyahud akhir."},
+{j:"Shalawat atas Nabi",k:"Bacalah shalawat setelah tasyahud akhir.",a:"اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ",l:"Allaahumma shalli 'alaa Muhammad",t:"Ya Allah, limpahkanlah shalawat kepada Nabi Muhammad."},
+{j:"Salam",k:"Tolehkan wajahmu ke kanan, lalu ke kiri.",a:"السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ",l:"Assalaamu'alaikum warahmatullaah",t:"Semoga keselamatan dan rahmat Allah tercurah untukmu."},
+{j:"Tertib",k:"Lakukan semua langkah di atas secara berurutan.",a:"",l:"Urut dari awal sampai akhir",t:"Jika urutannya terbalik, sholatmu perlu diulang. Tetap semangat!"}
+];
+
+function $(i){return document.getElementById(i)}
+function G(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function P(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+var tab='quran',AR=G('ar',{}),last=G('last',null),nama=G('nama',''),ukuran=30,tz=G('tz',{i:0,c:0,r:0,tot:0}),pg='wudhu',baca=G('baca',[]);
+function ubah(n){ukuran=Math.max(22,Math.min(48,ukuran+n));document.documentElement.style.setProperty('--ar',ukuran+'px')}
+function sapa(){var h=new Date().getHours();return h<11?'pagi':h<15?'siang':h<18?'sore':'malam'}
+function arab(n){return AR[n]||''}
+function daftar(f){var h='';M.forEach(function(s){if(f&&(s.l+' '+s.n).toLowerCase().indexOf(f)<0)return;h+='<button class="item" onclick="buka('+s.n+')"><div class="oct">'+s.n+'</div><div class="t"><b>'+s.l+'</b><small>'+s.c+' Ayat • '+s.t+'</small></div><div class="ar">'+arab(s.n)+'</div></button>'});return h||'<div class="ld">Surah tidak ditemukan. Coba kata kunci lain ya.</div>'}
+function cari(v){$('dl').innerHTML=daftar(v.trim().toLowerCase())}
+function vQuran(){var h='<div class="hero"><div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><h1>Assalamu\'alaikum'+(nama?', '+nama:'')+'</h1><p>Selamat '+sapa()+'. Mari awali dengan membaca Al-Qur\'an.</p></div><div class="panel">';
+if(last)h+='<button class="last" onclick="buka('+last.s+','+last.a+')"><div class="ic">📖</div><div><small>Lanjutkan bacaanmu</small><b>'+M[last.s-1].l+'</b><small>Ayat '+last.a+' • '+last.d+'</small></div><div class="go">›</div></button>';
+else h+='<div style="padding:4px 2px 12px"><small style="color:var(--mute)">Belum ada bacaan terakhir</small><b style="display:block;font-size:18px">Mulailah dari Al-Fatihah 🌿</b></div>';
+return h+'<input class="search" placeholder="🔍 Cari surah yang kamu inginkan" oninput="cari(this.value)"></div><div class="sec"><b>Surah</b><span>114 surah</span></div><div id="dl">'+daftar('')+'</div>'}
+function buka(n,a){var s=M[n-1];tab='det';$('nav').classList.add('hidden');if(baca.indexOf(n)<0){baca.push(n);P('baca',baca)}
+$('app').innerHTML='<div class="dh"><button class="cb" onclick="tutup()">←</button><div style="flex:1"><b>'+s.l+' '+arab(n)+'</b><small>'+s.c+' Ayat • '+s.t+'</small></div><button class="cb" onclick="ubah(-2)">A−</button><button class="cb" onclick="ubah(2)">A+</button></div><div id="isi"><div class="ld"><div class="sp"></div>Sedang menyiapkan '+s.l+' untukmu…</div></div>';window.scrollTo(0,0);
+var c=G('s'+n,null);if(c)return isi(n,c,a);
+fetch('https://equran.id/api/v2/surat/'+n).then(function(r){return r.json()}).then(function(r){P('s'+n,r.data);isi(n,r.data,a)}).catch(function(){$('isi').innerHTML='<div class="note">⚠️ Ayat belum bisa dimuat. Pastikan internetmu aktif, lalu coba lagi. Surah yang sudah pernah dibuka akan tersimpan dan bisa dibaca tanpa internet.</div><button class="btn" onclick="buka('+n+')">Coba lagi</button>'})}
+function isi(n,d,a){var h='<div class="ctx">'+(n!=1&&n!=9?'<div class="bis">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>':'')+'<h2 style="font-size:18px">'+d.namaLatin+'</h2><p style="font-size:13px;opacity:.9">"'+d.arti+'" • '+d.jumlahAyat+' ayat • '+d.tempatTurun+'</p></div>';
+d.ayat.forEach(function(x){var on=last&&last.s==n&&last.a==x.nomorAyat;h+='<div class="card ay" id="a'+x.nomorAyat+'"><div class="row"><div class="oct">'+x.nomorAyat+'</div><button class="bm'+(on?' on':'')+'" onclick="tandai('+n+','+x.nomorAyat+',this)">'+(on?'🔖 Terakhir dibaca':'🔖 Tandai')+'</button></div><div class="arab">'+x.teksArab+'</div><div class="lat">'+x.teksLatin+'</div><div class="art">'+x.teksIndonesia+'</div></div>'});
+$('isi').innerHTML=h+'<button class="btn" onclick="tutup()">← Kembali ke daftar surah</button>';
+if(a&&$('a'+a))setTimeout(function(){$('a'+a).scrollIntoView({block:'center'})},50)}
+function tandai(s,a,b){last={s:s,a:a,d:new Date().toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'})};P('last',last);document.querySelectorAll('.bm').forEach(function(e){e.className='bm';e.textContent='🔖 Tandai'});b.className='bm on';b.textContent='🔖 Terakhir dibaca'}
+function tutup(){$('nav').classList.remove('hidden');go('quran')}
+function vDoa(){var h='<div class="top"><h1>Doa Harian</h1><p>Kumpulan doa untuk menemani harimu</p></div>';DOA.forEach(function(d){h+='<div class="card"><b style="color:var(--g2)">'+d[0]+'</b><div class="arab">'+d[1]+'</div><div class="lat">'+d[2]+'</div><div class="art">'+d[3]+'</div></div>'});return h}
+function vTasbih(){var z=DZ[tz.i],t=tz.t||z[2],h='<div class="top"><h1>Tasbih Digital</h1><p>Ketuk lingkaran untuk berdzikir</p></div><div class="chips">';
+DZ.forEach(function(d,i){h+='<button class="chip'+(i==tz.i?' on':'')+'" onclick="pilih('+i+')">'+d[1]+'</button>'});
+return h+'</div><div class="card" style="text-align:center"><div class="arab" style="text-align:center;direction:rtl;font-size:34px">'+z[0]+'</div></div><div class="ring" id="rg" style="background:conic-gradient(var(--gold) '+(tz.c/t*100)+'%,#e4d9bd 0)"><button onclick="hit()"><b>'+tz.c+'</b><small>dari '+t+' • putaran '+tz.r+'</small></button></div><div class="stat"><div><b>'+tz.tot+'</b><small>Total dzikirmu</small></div><div><b>'+tz.r+'</b><small>Putaran selesai</small></div></div><button class="btn l" onclick="setT()">🎯 Ganti target ('+t+')</button><button class="btn" onclick="rst()">↺ Ulangi dari awal</button>'}
+function sv(){P('tz',tz)}
+function pilih(i){tz.i=i;tz.c=0;tz.t=0;sv();go('tasbih')}
+function hit(){var t=tz.t||DZ[tz.i][2];tz.c++;tz.tot++;if(tz.c>=t){tz.c=0;tz.r++;try{navigator.vibrate(200)}catch(e){}}else try{navigator.vibrate(15)}catch(e){}sv();go('tasbih')}
+function setT(){tz.t=tz.t==33?100:tz.t==100?99:33;if(!tz.t)tz.t=33;tz.c=0;sv();go('tasbih')}
+function rst(){tz.c=0;tz.r=0;sv();go('tasbih')}
+function vPanduan(){var l=pg=='wudhu'?wudhu:sholat,h='<div class="top"><h1>Panduan Ibadah</h1><p>Ikuti langkahnya satu per satu, ya</p></div><div class="chips"><button class="chip'+(pg=='wudhu'?' on':'')+'" onclick="pg=\'wudhu\';go(\'buku\')">💧 Cara Wudhu</button><button class="chip'+(pg=='sholat'?' on':'')+'" onclick="pg=\'sholat\';go(\'buku\')">🕌 Tata Cara Sholat</button></div>';
+l.forEach(function(s,i){var a=s.ar||s.a||'';h+='<div class="card"><div style="display:flex;gap:12px;align-items:center"><div class="oct">'+(i+1)+'</div><div><b style="color:var(--g2)">'+s.j+'</b><div style="font-size:13px;color:var(--mute)">'+s.k+'</div></div></div>'+(a?'<div class="arab">'+a+'</div>':'')+'<div class="lat" style="margin-top:8px">'+(s.la||s.l)+'</div><div class="tip">💡 '+(s.at||s.t)+'</div></div>'});return h}
+function vProfil(){return '<div class="top"><h1>Profilmu</h1><p>Atur Pedoman Muslim sesuai kebutuhanmu</p></div><div class="card"><b>Siapa namamu?</b><input class="inp" id="nm" placeholder="Tulis namamu di sini" value="'+nama.replace(/"/g,'')+'"><button class="btn" style="margin:12px 0 0;width:100%" onclick="simpanNama($(\'nm\').value.trim())">Simpan</button></div><div class="stat"><div><b>'+baca.length+'</b><small>Surah yang kamu buka</small></div><div><b>'+tz.tot+'</b><small>Total dzikir</small></div></div><div class="card"><b>Ukuran huruf Arab</b><input type="range" min="22" max="48" value="'+ukuran+'" style="width:100%;margin-top:10px" oninput="ubah(this.value-ukuran)"></div><button class="btn l" onclick="if(confirm(\'Hapus semua data bacaan, dzikir, dan nama?\')){hapusData()}">🗑️ Hapus data saya</button><p style="text-align:center;font-size:12px;color:var(--mute);margin:14px">Semoga ibadahmu selalu diberkahi 🤲</p>'}
+var NAV=[['quran','📖','Al-Qur\'an',vQuran],['doa','🤲','Doa',vDoa],['tasbih','📿','Tasbih',vTasbih],['buku','📚','Panduan',vPanduan],['profil','👤','Profil',vProfil]];
+function go(t){tab=t;var sc=window.scrollY;NAV.forEach(function(n){if(n[0]==t)$('app').innerHTML=n[3]()});$('nav').innerHTML=NAV.map(function(n){return '<button class="'+(n[0]==t?'on':'')+'" onclick="go(\''+n[0]+'\');window.scrollTo(0,0)"><span>'+n[1]+'</span>'+n[2]+'</button>'}).join('');if(t=='tasbih')window.scrollTo(0,sc)}
+function api(m,b){return fetch('/api/profil',{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+function simpanNama(v){nama=v;P('nama',v);api('POST',{nama:v}).catch(function(){});go('profil')}
+function hapusData(){api('POST',{nama:''}).catch(function(){}).then(function(){try{localStorage.clear()}catch(e){}location.reload()})}
+api('GET').then(function(r){if(r.nama!==nama){nama=r.nama||nama;P('nama',nama);if(tab=='quran'||tab=='profil')go(tab)}}).catch(function(){});
+go('quran');
+if(!Object.keys(AR).length)fetch('https://equran.id/api/v2/surat').then(function(r){return r.json()}).then(function(r){r.data.forEach(function(s){AR[s.nomor]=s.nama});P('ar',AR);if(tab=='quran')go('quran')}).catch(function(){});
+</script></body></html>
